@@ -3,19 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>门店导航</title>
+    <title>门店信息</title>
     <style>
+        /* 设置全局样式 */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            text-align: center;
         }
+        /* 固定在顶部的办公室电话信息 */
+        .office-phone {
+            font-size: 18px;
+            font-weight: bold;
+            color: black;
+            padding: 10px;
+            background-color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        /* 固定导航栏，提供快速跳转到品牌分类 */
+        .nav-bar {
+            position: fixed;
+            top: 50px;
+            width: 100%;
+            background-color: #007AFF;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 18px;
+            z-index: 999;
+        }
+        .nav-bar a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        /* 内容容器，避免被导航栏遮挡 */
         .container {
-            padding: 20px;
+            padding: 120px 20px 20px;
             max-width: 800px;
             margin: auto;
         }
+        /* 每个品牌分类的标题样式 */
         .category-title {
             font-size: 22px;
             font-weight: bold;
@@ -23,7 +57,9 @@
             color: #333;
             border-bottom: 2px solid #007AFF;
             padding-bottom: 5px;
+            text-align: left;
         }
+        /* 门店卡片样式 */
         .store-card {
             background: white;
             border: 1px solid #ddd;
@@ -31,6 +67,14 @@
             margin: 10px 0;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .store-image {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 10px;
         }
         .store-name {
             font-size: 18px;
@@ -42,57 +86,109 @@
             margin: 5px 0;
             color: #555;
         }
-        .store-image {
-            width: 100%;
-            max-height: 200px;
-            object-fit: cover;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-        .office-phone {
-            font-size: 16px;
-            font-weight: bold;
-            color: #D9534F;
-            margin-top: 10px;
-        }
     </style>
 </head>
 <body>
+    <div class="office-phone">办公室电话：0535 6331444</div>
+    
+    <div class="nav-bar">
+        <a href="#lining">李宁</a>
+        <a href="#qiaodan">中国乔丹</a>
+        <a href="#skechers">斯凯奇</a>
+    </div>
+    
     <div class="container">
-        <h2>门店导航</h2>
-        <div class="office-phone">办公室电话：400-1234-5678</div>
+        <div id="lining" class="category-title">李宁</div>
+        <!-- 李宁门店列表（共8家） -->
+        <div class="store-card">
+            <img class="store-image" src="images/lining1.jpg" alt="李宁 1 号店">
+            <div class="store-name">李宁（福海路店）</div>
+            <div class="store-address">地址：福山区福海路与崇文街交汇处西南</div>
+            <div class="store-phone">电话：0535 6331444</div>
+        </div>
+        <div class="store-card">
+            <img class="store-image" src="images/lining1.jpg" alt="李宁 1 号店">
+            <div class="store-name">李宁（万科广场店）</div>
+            <div class="store-address">地址：福山区福海路万科广场1楼</div>
+            <div class="store-phone">电话：暂无</div>
+        </div>
+        <div class="store-card">
+            <img class="store-image" src="images/lining1.jpg" alt="李宁 1 号店">
+            <div class="store-name">李宁（商业街店）</div>
+            <div class="store-address">地址：福山区商业街蓝白餐厅南侧</div>
+            <div class="store-phone">电话：0535 6330899</div>
+        </div>
+              <div class="store-card">
+            <img class="store-image" src="images/lining1.jpg" alt="李宁 1 号店">
+            <div class="store-name">李宁（衡山路大润发店）</div>
+            <div class="store-address">地址：开发区衡山路大润发1楼近东门处</div>
+            <div class="store-phone">电话：0535 6386063</div>
+        </div>
+              <div class="store-card">
+            <img class="store-image" src="images/lining1.jpg" alt="李宁 1 号店">
+            <div class="store-name">李宁（通海路店）</div>
+            <div class="store-address">地址：牟平区通海路与宁海大街交汇处西南</div>
+            <div class="store-phone">电话：0535 4680579</div>
+        </div>
+              <div class="store-card">
+            <img class="store-image" src="images/lining1.jpg" alt="李宁 1 号店">
+            <div class="store-name">李宁（振华商厦店）</div>
+            <div class="store-address">地址：牟平区通海路振华商厦5楼</div>
+            <div class="store-phone">电话：暂无</div>
+        </div>
+              <div class="store-card">
+            <img class="store-image" src="images/lining1.jpg" alt="李宁 1 号店">
+            <div class="store-name">李宁（文兴路南店）</div>
+            <div class="store-address">地址：牟平区文兴路南</div>
+            <div class="store-phone">电话：0535 4218877</div>
+        </div>
+              <div class="store-card">
+            <img class="store-image" src="images/lining1.jpg" alt="李宁 1 号店">
+            <div class="store-name">李宁（文兴路北店）</div>
+            <div class="store-address">地址：牟平区文兴路北</div>
+            <div class="store-phone">电话：0535 4250577</div>
+        </div>
+      
+        <div id="qiaodan" class="category-title">中国乔丹</div>
+        <!-- 中国乔丹门店列表（共5家） -->
+        <div class="store-card">
+            <img class="store-image" src="images/qiaodan1.jpg" alt="中国乔丹 1 号店">
+            <div class="store-name">中国乔丹（福海路店）</div>
+            <div class="store-address">地址：XXX 路 XX 号</div>
+            <div class="store-phone">电话：123-456-7890</div>
+        </div>
+              <div class="store-card">
+            <img class="store-image" src="images/qiaodan1.jpg" alt="中国乔丹 1 号店">
+            <div class="store-name">中国乔丹（万科广场店）</div>
+            <div class="store-address">地址：XXX 路 XX 号</div>
+            <div class="store-phone">电话：123-456-7890</div>
+        </div>
+              <div class="store-card">
+            <img class="store-image" src="images/qiaodan1.jpg" alt="中国乔丹 1 号店">
+            <div class="store-name">中国乔丹（衡山路大润发店）</div>
+            <div class="store-address">地址：XXX 路 XX 号</div>
+            <div class="store-phone">电话：123-456-7890</div>
+        </div>
+              <div class="store-card">
+            <img class="store-image" src="images/qiaodan1.jpg" alt="中国乔丹 1 号店">
+            <div class="store-name">中国乔丹（大悦城店）</div>
+            <div class="store-address">地址：XXX 路 XX 号</div>
+            <div class="store-phone">电话：123-456-7890</div>
+        </div>
+              <div class="store-card">
+            <img class="store-image" src="images/qiaodan1.jpg" alt="中国乔丹 1 号店">
+            <div class="store-name">中国乔丹（宁海大街店）</div>
+            <div class="store-address">地址：XXX 路 XX 号</div>
+            <div class="store-phone">电话：123-456-7890</div>
+        </div>
         
-        <!-- 李宁门店列表 -->
-        <div class="category-title">李宁</div>
-        <!-- 复用组件方式: 复制以下 .store-card 代码块并修改店铺信息 -->
+        <div id="skechers" class="category-title">斯凯奇</div>
+        <!-- 斯凯奇门店（共1家） -->
         <div class="store-card">
-            <img src="lining1.jpg" alt="李宁1店" class="store-image">
-            <div class="store-name">李宁1店</div>
-            <div class="store-address">地址：XX路XX号</div>
-            <div class="store-phone">电话：123-4567-8901</div>
-        </div>
-                <div class="store-card">
-            <img src="lining1.jpg" alt="李宁2店" class="store-image">
-            <div class="store-name">李宁2店</div>
-            <div class="store-address">地址：XX路XX号</div>
-            <div class="store-phone">电话：123-4567-8901</div>
-        </div>
-        <!-- 乔丹门店列表 -->
-        <div class="category-title">乔丹</div>
-        <div class="store-card">
-            <img src="qiaodan1.jpg" alt="乔丹1店" class="store-image">
-            <div class="store-name">乔丹1店</div>
-            <div class="store-address">地址：XX路XX号</div>
-            <div class="store-phone">电话：123-4567-8911</div>
-        </div>
-        
-        <!-- 斯凯奇门店列表 -->
-        <div class="category-title">斯凯奇</div>
-        <div class="store-card">
-            <img src="skechers1.jpg" alt="斯凯奇1店" class="store-image">
-            <div class="store-name">斯凯奇1店</div>
-            <div class="store-address">地址：XX路XX号</div>
-            <div class="store-phone">电话：123-4567-8921</div>
+            <img class="store-image" src="images/skechers1.jpg" alt="斯凯奇 1 号店">
+            <div class="store-name">斯凯奇（衡山路大润发店）</div>
+            <div class="store-address">地址：XXX 路 XX 号</div>
+            <div class="store-phone">电话：123-456-7890</div>
         </div>
     </div>
 </body>
