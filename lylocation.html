@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>门店导航</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .category-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #333;
+            border-bottom: 2px solid #007AFF;
+            padding-bottom: 5px;
+        }
+        .store-card {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .store-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #007AFF;
+        }
+        .store-address, .store-phone {
+            font-size: 14px;
+            margin: 5px 0;
+            color: #555;
+        }
+        .store-image {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .office-phone {
+            font-size: 16px;
+            font-weight: bold;
+            color: #D9534F;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>门店导航</h2>
+        <div class="office-phone">办公室电话：400-1234-5678</div>
+        
+        <!-- 李宁门店列表 -->
+        <div class="category-title">李宁</div>
+        <!-- 复用组件方式: 复制以下 .store-card 代码块并修改店铺信息 -->
+        <div class="store-card">
+            <img src="lining1.jpg" alt="李宁1店" class="store-image">
+            <div class="store-name">李宁1店</div>
+            <div class="store-address">地址：XX路XX号</div>
+            <div class="store-phone">电话：123-4567-8901</div>
+        </div>
+                <div class="store-card">
+            <img src="lining1.jpg" alt="李宁2店" class="store-image">
+            <div class="store-name">李宁2店</div>
+            <div class="store-address">地址：XX路XX号</div>
+            <div class="store-phone">电话：123-4567-8901</div>
+        </div>
+        <!-- 乔丹门店列表 -->
+        <div class="category-title">乔丹</div>
+        <div class="store-card">
+            <img src="qiaodan1.jpg" alt="乔丹1店" class="store-image">
+            <div class="store-name">乔丹1店</div>
+            <div class="store-address">地址：XX路XX号</div>
+            <div class="store-phone">电话：123-4567-8911</div>
+        </div>
+        
+        <!-- 斯凯奇门店列表 -->
+        <div class="category-title">斯凯奇</div>
+        <div class="store-card">
+            <img src="skechers1.jpg" alt="斯凯奇1店" class="store-image">
+            <div class="store-name">斯凯奇1店</div>
+            <div class="store-address">地址：XX路XX号</div>
+            <div class="store-phone">电话：123-4567-8921</div>
+        </div>
+    </div>
+</body>
+</html>
+
